@@ -2,42 +2,42 @@ You are given a non-null array of integers. Implement the method arrayToTree whi
 
 For example, given the array [17, 0, -4, 3, 15] you should create the following tree:
 
-    17
-   /  \
-  0   -4
- / \
-3   15
+        17
+       /  \
+      0   -4
+     / \
+    3   15
 
 The class TreeNode is available for you:
 
-class TreeNode {
+    class TreeNode {
 
-    public TreeNode left;
-    public TreeNode right;
-    public int value;
+        public TreeNode left;
+        public TreeNode right;
+        public int value;
 
-    public TreeNode(int value, TreeNode left, TreeNode right)
-    {
-        this.value = value;
-        this.left = left;
-        this.right = right;
+        public TreeNode(int value, TreeNode left, TreeNode right)
+        {
+            this.value = value;
+            this.left = left;
+            this.right = right;
+        }
+
+        public TreeNode(int value) 
+        {
+            this.value = value;
+        }
+
+        public override bool Equals(Object other)
+        {
+            ... // Already implemented for you and used in test cases 
+        }
+        ...
     }
-
-    public TreeNode(int value) 
-    {
-        this.value = value;
-    }
-
-    public override bool Equals(Object other)
-    {
-        ... // Already implemented for you and used in test cases 
-    }
-    ...
-}
 
 This kata is part of fun with trees series:
 
-    Fun with trees: max sum
-    Fun with trees: array to tree
-    Fun with trees: is perfect
+* Fun with trees: max sum
+* Fun with trees: array to tree
+* Fun with trees: is perfect
 

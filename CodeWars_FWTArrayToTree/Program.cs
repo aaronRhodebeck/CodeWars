@@ -6,7 +6,7 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Solution.ArrayToTree(new int[] {17, 0, -4, 3, 15});
         }
     }
 }
