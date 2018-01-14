@@ -4,7 +4,7 @@ import * as methods from "./Kata";
 
 const { convertToHex, rgb, addLeadingZero } = methods;
 
-fdescribe("convertToHex", () => {
+describe("convertToHex", () => {
   it("should accept a number and return a string", () => {
     expect(convertToHex(255)).toEqual(jasmine.any(String));
   });
@@ -14,7 +14,7 @@ fdescribe("convertToHex", () => {
     expect(Number.parseInt(convertedHex, 16)).toEqual(randomNumber);
   });
 });
-fdescribe("addLeadingZero", () => {
+describe("addLeadingZero", () => {
   it("should accept a string a return a string", () => {
     expect(addLeadingZero("0")).toEqual(jasmine.any(String));
   });
@@ -28,7 +28,7 @@ fdescribe("addLeadingZero", () => {
     expect(addLeadingZero("23")).toBe("23");
   });
 });
-fdescribe("rgb()", () => {
+describe("rgb()", () => {
   it("should accept 3 numbers and return a string", () => {
     expect(rgb(5, 5, 5)).toEqual(jasmine.any(String));
   });
