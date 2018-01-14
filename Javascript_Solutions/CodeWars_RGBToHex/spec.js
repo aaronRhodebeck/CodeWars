@@ -2,7 +2,16 @@
 
 import * as methods from "./Kata";
 
-const { convertToHex, rgb, addLeadingZero } = methods;
+const { roundToValidNumber, convertToHex, rgb, addLeadingZero } = methods;
+
+describe("roundToValidNumber", () => {
+  it("should return 255 for all numbers over 255", () => {
+    expect(roundToValidNumber(256)).toBe(255);
+  });
+  it("should return 0 for all numbers less than zero", () => {
+    expect(roundToValidNumber(-1)).toBe(0);
+  });
+});
 
 describe("convertToHex", () => {
   it("should accept a number and return a string", () => {
@@ -37,6 +46,9 @@ describe("rgb()", () => {
   });
   it("should return FF for numbers over 255", () => {
     expect(rgb(255, 255, 300)).toBe("FFFFFF");
+  });
+  it("should return 00 for numbers less than 0", () => {
+    expect(rgb(0, 0, -20)).toBe("000000");
   });
   it("should return the correct hexidecimal for the rgb code", () => {
     expect(rgb(255, 255, 255)).toBe("FFFFFF");
