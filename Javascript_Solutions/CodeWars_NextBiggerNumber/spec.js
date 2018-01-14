@@ -22,3 +22,16 @@ describe("sortArray", () => {
     expect(methods.sortArray(["2", "5", "3", "4"])).toEqual(["2", "3", "4", "5"]);
   });
 });
+
+describe("getAllCombinations", () => {
+  it("should return an array of all possible combinations of numbers", () => {
+    expect(methods.getAllCombinations(["1", "2", "3"])).toEqual([
+      "123",
+      "132",
+      "213",
+      "231",
+      "312",
+      "321"
+    ]);
+  });
+});
