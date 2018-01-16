@@ -9,6 +9,7 @@ fdescribe("sameStructureAs", () => {
     it("should return false if the arrays dont match", () => {
       expect([1].sameStructureAs([[1]])).toBe(false);
       expect([[1]].sameStructureAs([1])).toBe(false);
+      expect([1, [1, 1]].sameStructureAs([2, [2]])).toBe(false);
     });
     it("should ignore non-arrays", () => {
       expect([1].sameStructureAs([2])).toBe(true);
