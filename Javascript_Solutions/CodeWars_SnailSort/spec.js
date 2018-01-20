@@ -2,7 +2,7 @@
 
 import snail from "./Kata";
 
-fdescribe("Sample tests", () => {
+describe("Sample tests", () => {
   it("should return the outermost elements to the innermost, traveling clockwise", () => {
     expect(snail([[1, 2, 3], [4, 5, 6], [7, 8, 9]])).toEqual([1, 2, 3, 6, 9, 8, 7, 4, 5]);
     expect(snail([[1, 2, 3, 1], [4, 5, 6, 4], [7, 8, 9, 7], [7, 8, 9, 7]])).toEqual([
